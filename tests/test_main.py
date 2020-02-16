@@ -46,7 +46,21 @@ class TestMain(unittest.TestCase):
         self.assertIsNotNone(main.fibonacci)
         fibs = (0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89)
         for n in range(1, 11):
-            self.assertEqual(main.fibonacci(n), fibs[n])
+            self.assertEqual(main.fibonacci(n), fibs[n-1])
+            # should be fibs[n-1] beucase on the README.d file says:
+            # Display the result of calling fibonacci(8), which should be 13:
+
+            # 0 1 1 2 3 5 8 [13] 21
+
+            # The number in brackets is the 8th fibonacci number.
+            # >>>
+            # 8th position wich it means on the index 7.
+            # With that argument we can say:
+            # 0 is in the 1st position
+            # 1 is in the 2nd position
+            # 1 is in the 3rd position
+            # 2 is in the 4th position
+            # and so on...
 
 
 if __name__ == '__main__':
