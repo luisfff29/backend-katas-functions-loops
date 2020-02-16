@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 """Implements math functions without using operators except for '+' and '-' """
 
-__author__ = "???"
+__author__ = "luisfff29"
 
 
 def add(x, y):
