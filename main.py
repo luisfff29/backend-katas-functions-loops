@@ -44,8 +44,15 @@ def power(x, n):
 
 def factorial(x):
     """Compute factorial of x, where x > 0"""
-    # your code here
-    return
+    if x <= 0:
+        return "x can't be 0 or a negative number"
+    if x == 1:
+        return x
+    else:
+        result = multiply(x, x-1)
+        for i in range(x-2, 0, -1):
+            result = multiply(result, i)
+        return result
 
 
 def fibonacci(n):
