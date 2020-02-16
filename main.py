@@ -11,8 +11,24 @@ def add(x, y):
 
 def multiply(x, y):
     """Multiply x with y. Handles negative values of x or y."""
-    # your code here
-    return
+    if x == 0 or y == 0:
+        return 0
+    elif x == 1:
+        return y
+    elif y == 1:
+        return x
+    elif x == -1:
+        return -y
+    elif y == -1:
+        return -x
+    else:
+        result = add(x, x)
+        for i in range(abs(y)-2):
+            result = add(result, x)
+        if y < 0:
+            return -result
+        else:
+            return result
 
 
 def power(x, n):
