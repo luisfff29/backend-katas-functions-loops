@@ -6,8 +6,7 @@ __author__ = "luisfff29"
 
 def add(x, y):
     """Add two integers. Handles negative values."""
-    # your code here
-    return
+    return x + y
 
 
 def multiply(x, y):
