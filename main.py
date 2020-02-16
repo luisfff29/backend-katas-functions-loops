@@ -43,11 +43,11 @@ def power(x, n):
 
 
 def factorial(x):
-    """Compute factorial of x, where x > 0"""  # x CAN be 0, 0! == 1
-    if x <= 0:
+    """Compute factorial of x, where x > 0"""  # x CAN be 0; 0! == 1
+    if x < 0:
         return "x can't be 0 or a negative number"
-    if x == 1:
-        return x
+    if x == 0 or x == 1:
+        return 1
     else:
         result = multiply(x, x-1)
         for i in range(x-2, 0, -1):
