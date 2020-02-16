@@ -29,8 +29,19 @@ def multiply(x, y):
 
 def power(x, n):
     """Raise x to power n, where n >= 0"""
-    # your code here
-    return
+    if n < 0:
+        return "n can't be a negative number"
+    elif n == 0:
+        return 1
+    elif x == 0:
+        return 0
+    elif n == 1:
+        return x
+    else:
+        result = multiply(x, x)
+        for i in range(n - 2):
+            result = multiply(result, x)
+        return result
 
 
 def factorial(x):
