@@ -57,8 +57,17 @@ def factorial(x):
 
 def fibonacci(n):
     """Compute the nth term of fibonacci sequence"""
-    # your code here
-    return
+    if n == 1:
+        return 0
+    if n == 2 or n == 3:
+        return 1
+    else:
+        (a, b) = (1, 1)
+        result = add(a, b)
+        for i in range(n-4):
+            (result, b) = (b, result)
+            result = add(result, b)
+        return result
 
 
 if __name__ == '__main__':
