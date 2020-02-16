@@ -71,5 +71,9 @@ def fibonacci(n):
 
 
 if __name__ == '__main__':
-    # your code to call functions above
-    pass
+    """Calling the functions above"""
+    print('add(2, 4) = ' + str(add(2, 4)))
+    print('multiply(6, -8) = ' + str(multiply(6, -8)))
+    print('power(2, 8) = ' + str(power(2, 8)))
+    print('factorial(4) = ' + str(factorial(4)))
+    print('fibonacci(8) = ' + str(fibonacci(8)))
