@@ -19,11 +19,13 @@ def multiply(x, y):
         return -x if y == -1 else -y
     else:
         result = add(x, x)
-        for i in range(abs(y)-2):
-            result = add(result, x)
         if y < 0:
+            for i in range(-y-2):
+                result = add(result, x)
             return -result
         else:
+            for i in range(y-2):
+                result = add(result, x)
             return result
 
 
