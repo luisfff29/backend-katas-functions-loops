@@ -22,11 +22,11 @@ def multiply(x, y):
     else:
         result = add(x, x)
         if y < 0:
-            for i in range(operator.neg(y) - 2):
+            for i in range(operator.neg(y) + -2):
                 result = add(result, x)
             return operator.neg(result)
         else:
-            for i in range(y - 2):
+            for i in range(y + -2):
                 result = add(result, x)
             return result
 
@@ -41,7 +41,7 @@ def power(x, n):
         return x
     else:
         result = multiply(x, x)
-        for i in range(n - 2):
+        for i in range(n + -2):
             result = multiply(result, x)
         return result
 
@@ -53,8 +53,8 @@ def factorial(x):
     if x == 0 or x == 1:
         return 1
     else:
-        result = multiply(x, x-1)
-        for i in range(x-2, 0, -1):
+        result = multiply(x, x + -1)
+        for i in range(x + -2, 0, -1):
             result = multiply(result, i)
         return result
 
@@ -68,7 +68,7 @@ def fibonacci(n):
     else:
         (a, b) = (1, 1)
         result = add(a, b)
-        for i in range(n-4):
+        for i in range(n + -4):
             (result, b) = (b, result)
             result = add(result, b)
         return result
