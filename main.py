@@ -3,6 +3,8 @@
 
 __author__ = "luisfff29"
 
+import operator
+
 
 def add(x, y):
     """Add two integers. Handles negative values."""
@@ -13,18 +15,18 @@ def multiply(x, y):
     """Multiply x with y. Handles negative values of x or y."""
     if x == 0 or y == 0:
         return 0
+    elif x == -1 or y == -1:
+        return operator.neg(x) if y == -1 else operator.neg(y)
     elif x == 1 or y == 1:
         return x if y == 1 else y
-    elif x == -1 or y == -1:
-        return -x if y == -1 else -y
     else:
         result = add(x, x)
         if y < 0:
-            for i in range(-y-2):
+            for i in range(operator.neg(y) - 2):
                 result = add(result, x)
-            return -result
+            return operator.neg(result)
         else:
-            for i in range(y-2):
+            for i in range(y - 2):
                 result = add(result, x)
             return result
 
